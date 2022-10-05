@@ -1,0 +1,10 @@
+.headerPrincipal .container{
+    display: flex; /* Utilizamos la implementacion para ocupar flex*/
+    align-items: center;  /* Alineamos los items para que quedaran en el medio*/
+    justify-content: space-between;/* Agregamos space-between para tener un espacio entre medio de los items */
+}
+
+.headerPrincipal-nav{
+    display: flex; /*Valor de la propiedad display que se refiere al flexbox es flex. O sea, display:flex*/
+
+}
