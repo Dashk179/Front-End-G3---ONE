@@ -6,5 +6,25 @@
 
 .headerPrincipal-nav{
     display: flex; /*Valor de la propiedad display que se refiere al flexbox es flex. O sea, display:flex*/
-
 }
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin-right: 5px;
+   }
+
+   .rodapePrincipal-contatoForm{
+    width: 25%;
+   }
+
+   .rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+   }
