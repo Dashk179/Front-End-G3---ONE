@@ -1,0 +1,23 @@
+[33mcommit 0d73e4964399b792581f773e9cc78f89193f3882[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Arturo Perez <dash_arturo@hotmail.com>
+Date:   Wed Oct 5 18:13:11 2022 -0500
+
+    Implementacion del estilos al apartado de Mapa de cursos
+
+[33mcommit 0795c91f26a178a8a2f78159f8dd70d684bd3caf[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Arturo Perez <dash_arturo@hotmail.com>
+Date:   Tue Oct 4 23:22:55 2022 -0500
+
+    Arreglando el Footer
+
+[33mcommit 9528c415cae439ae89948944132a9649b93fca0e[m
+Author: Arturo Perez <dash_arturo@hotmail.com>
+Date:   Tue Oct 4 23:06:39 2022 -0500
+
+    Implementacion de display-flex con las propiedades align-items y justify-content
+
+[33mcommit 7120197a8408f2e364e023f5dd79eca5912f08c2[m
+Author: Arturo Perez <dash_arturo@hotmail.com>
+Date:   Tue Oct 4 22:37:17 2022 -0500
+
+    Inicio
