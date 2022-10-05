@@ -1,30 +1,46 @@
-.headerPrincipal .container{
-    display: flex; /* Utilizamos la implementacion para ocupar flex*/
-    align-items: center;  /* Alineamos los items para que quedaran en el medio*/
-    justify-content: space-between;/* Agregamos space-between para tener un espacio entre medio de los items */
+/*Header*/
+.headerPrincipal .container {
+    display: flex;
+    /* Utilizamos la implementacion para ocupar flex*/
+    align-items: center;
+    /* Alineamos los items para que quedaran en el medio*/
+    justify-content: space-between;
+    /* Agregamos space-between para tener un espacio entre medio de los items */
 }
 
-.headerPrincipal-nav{
-    display: flex; /*Valor de la propiedad display que se refiere al flexbox es flex. O sea, display:flex*/
+.headerPrincipal-nav {
+    display: flex;
+    /*Valor de la propiedad display que se refiere al flexbox es flex. O sea, display:flex*/
 }
 
-.rodapePrincipal-patrocinadores .container{
+/*-------------------------------------------------------*/
+/*Footer*/
+.rodapePrincipal-patrocinadores .container {
     display: flex;
     justify-content: space-between;
 }
 
-.rodapePrincipal-patrocinadores-list{
+.rodapePrincipal-patrocinadores-list {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 70%;
     margin-right: 5px;
-   }
+}
 
-   .rodapePrincipal-contatoForm{
+.rodapePrincipal-contatoForm {
     width: 25%;
-   }
+}
 
-   .rodapePrincipal-contatoForm-fieldset{
+.rodapePrincipal-contatoForm-fieldset {
     display: flex;
-   }
+}
+
+/*-------------------------------------------------------*/
+/*Mapa de cursos*/
+.rodapePrincipal-navMap-list{
+    display: flex; /*Colocamos los elementos a un lado del otro*/
+    flex-direction: column;/*Colocamos un elemento de bajo del otro*/
+    height: 260px;/*Colocamos la altura*/
+    flex-wrap: wrap;/*Qubramos el contenido por cada 250 pixeles rellena y brinca al otro lado*/
+}
