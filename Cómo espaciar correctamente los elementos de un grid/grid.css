@@ -1,0 +1,9 @@
+/*Tenemos que espaciar 3 elementos por linea*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .course {
+    width: 31.3%;/* 31.3 * 3 = 93.9%*/
+    margin: 1%; /*  1% a la izquierda y 1% a la derecha de cada elemento = 6%.*/
+  }
