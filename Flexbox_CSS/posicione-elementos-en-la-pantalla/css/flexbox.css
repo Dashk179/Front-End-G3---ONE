@@ -38,21 +38,37 @@
 
 /*-------------------------------------------------------*/
 /*Mapa de cursos*/
-.rodapePrincipal-navMap-list{
-    display: flex; /*Colocamos los elementos a un lado del otro*/
-    flex-direction: column;/*Colocamos un elemento de bajo del otro (En fila)*/
-    height: 260px;/*Colocamos la altura*/
-    flex-wrap: wrap;/*Quebramos el contenido por cada 250 pixeles rellena y brinca al otro lado*/
+.rodapePrincipal-navMap-list {
+    display: flex;
+    /*Colocamos los elementos a un lado del otro*/
+    flex-direction: column;
+    /*Colocamos un elemento de bajo del otro (En fila)*/
+    height: 260px;
+    /*Colocamos la altura*/
+    flex-wrap: wrap;
+    /*Quebramos el contenido por cada 250 pixeles rellena y brinca al otro lado*/
 }
 
 /*-------------------------------------------------------*/
 /*Nuestros cursos*/
-.contenidoPrincipal-cursos{
+.contenidoPrincipal-cursos {
     display: flex;
     flex-wrap: wrap;
 }
 
-.contenidoPrincipal-cursos-link{
+.contenidoPrincipal-cursos-link {
     display: flex;
     width: 23%;
+}
+
+/*-------------------------------------------------------*/
+/*Responsive*/
+.headerPrincipal .container {
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+
+.headerPrincipal-nav {
+    flex-direction: column;
 }
