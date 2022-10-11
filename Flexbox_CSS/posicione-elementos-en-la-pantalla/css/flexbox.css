@@ -73,7 +73,7 @@
 
 .videoSobre-video{
     flex-grow: 2;/*Incrementar el espacio y rellenamos el espacio disponible*/
-    flex-shrink: 2;
+    flex-shrink: 2;/*Resucimos el espacio cada vez que se reduzca la pantalla*/
 }
 .videoSobre-sobre-list{
     flex-grow: 2;
