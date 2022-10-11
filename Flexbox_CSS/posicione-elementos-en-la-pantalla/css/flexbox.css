@@ -61,6 +61,24 @@
     width: 23%;
 }
 
+.videoSobre .container{
+    display: flex;
+}
+
+.videoSobre-sobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSobre-video{
+    flex-grow: 2;/*Incrementar el espacio y rellenamos el espacio disponible*/
+    flex-shrink: 2;
+}
+.videoSobre-sobre-list{
+    flex-grow: 2;
+}
+
 /*-------------------------------------------------------*/
 /*Responsive*/
 @media (max-width:768px) {
@@ -106,4 +124,16 @@
     .rodapePrincipal-contatoForm-fieldset {
         justify-content: center;
     }
+
+
+    .headerPrincipal-nav-link-app{
+        order: -1; /*Quiero que mi elemento "Nuestra App" se recorra a la primera posicion */
+    }
+
+    .videoSobre .container{
+        flex-direction: column;
+    }
+
+
+    
 }
