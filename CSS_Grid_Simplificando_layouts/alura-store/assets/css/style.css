@@ -22,3 +22,16 @@
  
      grid-area: rodapie;
 }
+.destaques__titulo{
+    color: #fdfdfd;
+    background: rgb(0,0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: .6rem;
+}
+
+.box{
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
