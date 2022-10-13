@@ -7,7 +7,7 @@
      "contenido"
      "rodapie";
      grid-template-columns: auto;
-     grid-template-rows: 50px 100vh auto;
+     grid-template-rows: 50px auto auto;
 }
 
 .encabezado {
@@ -28,11 +28,16 @@
 
 .contenido {
     grid-area: contenido;
+    padding: 0 2rem;
 }
 
 .rodapie { 
- 
+    background-color: #fdfdfd;
      grid-area: rodapie;
+     color: #333333;
+     padding: 1rem;
+     text-align: center;
+     
 }
 .destaques__titulo{
     color: #fdfdfd;
