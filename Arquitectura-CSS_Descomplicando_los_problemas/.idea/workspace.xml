@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63c9e878-3f8f-4eab-ac53-747fd86b61ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquitectura-css-assets/assets/css/menu.item/menu-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/arquitectura-css-assets/assets/css/menu.item/menu-item.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquitectura-css-assets/assets/css/menu.item/menu-link.css" beforeDir="false" afterPath="$PROJECT_DIR$/arquitectura-css-assets/assets/css/menu.item/menu-link.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquitectura-css-assets/assets/css/menu.item/menu-lista.css" beforeDir="false" afterPath="$PROJECT_DIR$/arquitectura-css-assets/assets/css/menu.item/menu-lista.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arquitectura-css-assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/arquitectura-css-assets/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666373849192</updated>
       <workItem from="1666373852174" duration="4071000" />
-      <workItem from="1666571102887" duration="2324000" />
+      <workItem from="1666571102887" duration="3956000" />
     </task>
     <servers />
   </component>
