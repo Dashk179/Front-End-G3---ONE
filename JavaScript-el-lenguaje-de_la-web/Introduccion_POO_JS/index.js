@@ -1,53 +1,46 @@
 //Importamos clases
-import { CuentaCorriente } from "./CuentaCorriente.js";
 import { Cliente } from "./Cliente.js";
+import { CuentaCorriente } from "./CuentaCorriente.js";
+
+//Cliente Ivan
+const cliente = new Cliente();
+cliente.nombreCliente = 'Ivan';
+cliente.dniCliente = '14222';
+cliente.rfcCliente = 'Iva1n21312hs';
+
 
 const cuentaDeIvan = new CuentaCorriente();
+cuentaDeIvan.numero = "1";
+cuentaDeIvan.agencia = "Bancomer";
+cuentaDeIvan.cliente = cliente;
+console.log(cuentaDeIvan);
 
 let saldo = cuentaDeIvan.verSaldo();
 console.log(`El saldo actual es  ` + saldo)
 
 cuentaDeIvan.depositoEnCuenta(100);
 saldo = cuentaDeIvan.verSaldo();
-console.log(`El saldo actual es  ` + saldo) 
-
-cuentaDeIvan.retirarDeCuenta(100);
-saldo = cuentaDeIvan.verSaldo();
-console.log(`El saldo actual es  ` + saldo) 
+console.log(`El saldo actual de  Ivan es de: `+ saldo) ;
 
 
-
-const cliente1 = new Cliente(); // Se crea el objeto cliente 1 con la clase cliente y se agregan sus atributos del cliente 1
-cliente1.nombreCliente = "Arturo";
-cliente1.dniCliente = "1213";
-cliente1.rfcCliente = "PENASDFJASDJ123";
-
-const cuentaCorriente1 = new CuentaCorriente();
-cuentaCorriente1.numero = "1234567";
-cuentaCorriente1.saldo = "100000"
-cuentaCorriente1.agencia = "BBVA";
-
-
+//Cliente Arturo
 const cliente2 = new Cliente(); // Se crea el objeto cliente 1 con la clase cliente y se agregan sus atributos del cliente 1
-cliente2.nombreCliente = "Karen";
-cliente2.dniCliente = "12134";
-cliente2.rfcCliente = "KARENSDFJASDJ123";
+cliente2.nombreCliente = "Arturo";
+cliente2.dniCliente = "1213";
+cliente2.rfcCliente = "PENASDFJASDJ123";
 
-const cuentaCorriente2 = new CuentaCorriente()
-cuentaCorriente2.numero = "12345676";
-cuentaCorriente2.saldo = 0;
-cuentaCorriente2.agencia = "BBVA";
-
-const cliente3 = new Cliente(); // Se crea el objeto cliente 1 con la clase cliente y se agregan sus atributos del cliente 1
-cliente3.nombreCliente = "Leonardo";
-cliente3.dniCliente = "12137";
-cliente3.rfcCliente = "LEOSSDFJASDJ123";
-
-const cuentaCorriente3 = new CuentaCorriente()
-cuentaCorriente3.numero = "12345677";
-cuentaCorriente3.saldo = "1000007"
-cuentaCorriente3.agencia = "BBVA";
-
+const cuentaArturo = new CuentaCorriente();
+cuentaArturo.numero = "1234567";
+cuentaArturo.agencia = "BBVA";
+cuentaArturo.cliente = cliente2;
+let saldoArturo = cuentaArturo.verSaldo();
+console.log("El saldo actual de Arturo es de: " + saldoArturo);
+ 
+//Transferir de cuenta Ivan a Cuenta Arturo
+cuentaDeIvan.transferirParaCuenta(50,cuentaArturo);
+saldoArturo = cuentaArturo.verSaldo();
+console.log("El saldo actual de Arturo es de: " + saldoArturo);
+console.log("El saldo actual de Ivan es de: " + saldoArturo);
 
 
 /*

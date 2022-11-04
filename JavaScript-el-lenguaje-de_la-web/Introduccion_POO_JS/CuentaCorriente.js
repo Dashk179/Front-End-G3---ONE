@@ -1,12 +1,14 @@
 class CuentaCorriente{
+    cliente;
     numero;
-    #saldo; //Creacion de variable privada para encapsular el comportamiento y la restriccion del acesso de la clase.
     agencia;
+    #saldo; //Creacion de variable privada para encapsular el comportamiento y la restriccion del acesso de la clase.
 
     constructor(){
-        this.numero ='';
-        this.#saldo = 0;
+        this.cliente = null;//Se asigna null ya que hara referencia a un  objeto creado apartir  de  la clase cliente.
+        this.numero =''; 
         this.agencia = '';
+        this.#saldo = 0;
     }
 
     depositoEnCuenta(valor){
@@ -25,6 +27,11 @@ class CuentaCorriente{
 
         verSaldo(){
             return this.#saldo; //Con este metodo podemos consultar los datos sin la necesidad de acceder a las cosas internas
+        }
+
+        transferirParaCuenta(valor,cuentaDestino){
+            this.retirarDeCuenta(valor);
+            cuentaDestino.depositoEnCuenta(valor);
         }
 }
 
