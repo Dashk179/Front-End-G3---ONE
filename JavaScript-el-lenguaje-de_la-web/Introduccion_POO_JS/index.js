@@ -1,38 +1,6 @@
-class Cliente {//Definicion de clase
-    nombreCliente;
-    dniCliente;
-    rfcCliente;
-}
-
-class CuentaCorriente{
-    numero;
-    #saldo; //Creacion de variable privada para encapsular el comportamiento y la restriccion del acesso de la clase.
-    agencia;
-
-    constructor(){
-        this.numero ='';
-        this.#saldo = 0;
-        this.agencia = '';
-    }
-
-    depositoEnCuenta(valor){
-        if (valor>0) {
-            this.#saldo += valor;
-            return this.#saldo;
-        }
-        
-    }
-    retirarDeCuenta(valor){
-        if (valor <= this.#saldo) {
-            this.#saldo -= valor;
-            return this.#saldo;
-        }
-        }
-
-        verSaldo(){
-            return this.#saldo; //Con este metodo podemos consultar los datos sin la necesidad de acceder a las cosas internas
-        }
-}
+//Importamos clases
+import { CuentaCorriente } from "./CuentaCorriente.js";
+import { Cliente } from "./Cliente.js";
 
 const cuentaDeIvan = new CuentaCorriente();
 
@@ -98,3 +66,4 @@ cuentaCorriente2.depositoEnCuenta(200);
 console.log(cuentaCorriente2.saldo);
 cuentaCorriente2.depositoEnCuenta(300);
 console.log(cuentaCorriente2.saldo);*/
+
