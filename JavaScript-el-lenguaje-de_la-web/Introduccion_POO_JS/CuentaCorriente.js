@@ -29,7 +29,8 @@ class CuentaCorriente{
             return this.#saldo; //Con este metodo podemos consultar los datos sin la necesidad de acceder a las cosas internas
         }
 
-        transferirParaCuenta(valor,cuentaDestino){
+        transferirParaCuenta(valor,cuentaDestino)//valor = Parametro por valor /  cuentaDestino = Parametro por referencia
+        {
             this.retirarDeCuenta(valor);
             cuentaDestino.depositoEnCuenta(valor);
         }
