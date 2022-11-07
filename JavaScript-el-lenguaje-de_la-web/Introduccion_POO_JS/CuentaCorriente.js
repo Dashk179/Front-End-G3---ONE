@@ -1,11 +1,24 @@
+import { Cliente } from "./Cliente.js";
+
 class CuentaCorriente{
-    cliente;
+    #cliente;
     numero;
     agencia;
     #saldo; //Creacion de variable privada para encapsular el comportamiento y la restriccion del acesso de la clase.
 
+
+    set setcliente(valor){ //Vamos a protejer nuestro atributo cliente para asi no danar el atributo y sus datos, se asiganara un valor solo en caso de que la referencia sea de la clase cliente.
+        if (valor instanceof Cliente) {
+            this.#cliente = valor;
+        }
+       
+    }
+
+    get getcliente(){
+        return this.#cliente;
+    }
     constructor(){
-        this.cliente = null;//Se asigna null ya que hara referencia a un  objeto creado apartir  de  la clase cliente.
+        this.#cliente = null;//Se asigna null ya que hara referencia a un  objeto creado apartir  de  la clase cliente.
         this.numero =''; 
         this.agencia = '';
         this.#saldo = 0;

@@ -13,7 +13,7 @@ const cuentaDeIvan = new CuentaCorriente();
 cuentaDeIvan.numero = "1";
 cuentaDeIvan.agencia = "Bancomer";
 cuentaDeIvan.cliente = cliente;
-console.log(cuentaDeIvan);
+console.log(cuentaDeIvan.cliente);
 
 let saldo = cuentaDeIvan.verSaldo();
 console.log(`El saldo actual es  ` + saldo)
