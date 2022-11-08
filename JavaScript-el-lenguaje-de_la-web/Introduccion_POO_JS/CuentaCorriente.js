@@ -5,23 +5,24 @@ class CuentaCorriente{
     numero;
     agencia;
     #saldo; //Creacion de variable privada para encapsular el comportamiento y la restriccion del acesso de la clase.
+    static cantidadCuentas = 0;
 
-
-    set setcliente(valor){ //Vamos a protejer nuestro atributo cliente para asi no danar el atributo y sus datos, se asiganara un valor solo en caso de que la referencia sea de la clase cliente.
+    set cliente(valor){ //Vamos a protejer nuestro atributo cliente para asi no danar el atributo y sus datos, se asiganara un valor solo en caso de que la referencia sea de la clase cliente.
         if (valor instanceof Cliente) {
             this.#cliente = valor;
         }
        
     }
 
-    get getcliente(){
+    get cliente(){
         return this.#cliente;
     }
-    constructor(){
-        this.#cliente = null;//Se asigna null ya que hara referencia a un  objeto creado apartir  de  la clase cliente.
-        this.numero =''; 
-        this.agencia = '';
+    constructor(cliente,numero,agencia){
+        this.cliente =cliente;//Se asigna null ya que hara referencia a un  objeto creado apartir  de  la clase cliente.
+        this.numero =numero; 
+        this.agencia = agencia;
         this.#saldo = 0;
+        CuentaCorriente.cantidadCuentas++;
     }
 
     depositoEnCuenta(valor){
