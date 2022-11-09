@@ -25,10 +25,16 @@ export class Cuenta{
     }
 
     retirarDeCuenta(valor) {
+       this._retirarDeCuenta(valor,0);//Accedemos al metodo privado de nuestra clase para proteger nuestros datos.
+    }
+
+    _retirarDeCuenta(valor,comision) {
+        valor = valor * (1+comision/100);
         if (valor <= this.#saldo)
             this.#saldo -= valor;
         return this.#saldo;
     }
+
 
     verSaldo() {
         return this.#saldo;

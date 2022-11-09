@@ -10,4 +10,8 @@ export class CuentaCorriente extends Cuenta  {
         CuentaCorriente.cantidadCuentas++;
     }
 
+    retirarDeCuenta(valor) {
+        super._retirarDeCuenta(valor,5);//sobre escribimos el metodo padre y le pasamos el valor relacionado con la logica del negocio de la clase
+      }
+
 }
