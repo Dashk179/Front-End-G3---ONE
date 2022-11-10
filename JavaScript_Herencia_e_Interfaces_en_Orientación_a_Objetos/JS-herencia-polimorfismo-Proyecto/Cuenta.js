@@ -3,6 +3,9 @@ export class Cuenta{
     #saldo;
 
     constructor(cliente,numero,agencia,saldo){
+        if (this.constructor == Cuenta) { //Hacemos que la clase sea abstracta, protegerla para que solo sea extensible y no instanciable
+            throw new Error('No se debe instanciar objetos de la clase Cuenta');
+        }
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente = cliente;
@@ -25,8 +28,9 @@ export class Cuenta{
     }
 
     retirarDeCuenta(valor) {
-       this._retirarDeCuenta(valor,0);//Accedemos al metodo privado de nuestra clase para proteger nuestros datos.
-    }
+        //Metodo abstracto: existe su definicion pero no hace nada y a la vez lo protegemos
+        throw new Error('Debe implementar el metodo retirarDeCuenta en su clase');
+      }
 
     _retirarDeCuenta(valor,comision) {
         valor = valor * (1+comision/100);
