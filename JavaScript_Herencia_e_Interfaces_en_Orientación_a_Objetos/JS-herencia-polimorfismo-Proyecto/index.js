@@ -16,13 +16,14 @@ empleado.asignarClave('12345');
 
 const gerente = new Gerente('Arturo Perez','23333',12000);
 gerente.asignarClave('54321');
-//const director = new Director('Josue Perez','44444',15000);
+
+ const director = new Director('Josue Perez','44444',15000);
 
 
 
 console.log(empleado.verBonificacion());
  console.log(gerente.verBonificacion());
-// console.log(director.verBonificacion());
+ console.log(director.verBonificacion());
 
 
 console.log(SistemaAutenticacion.login(empleado,'12345'));
