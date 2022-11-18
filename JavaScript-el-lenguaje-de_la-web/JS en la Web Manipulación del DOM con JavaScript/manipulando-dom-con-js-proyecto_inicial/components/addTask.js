@@ -1,3 +1,4 @@
+import { uniqueDates } from "../services/date.js";
 import checkComplete from "./checkComplete.js";
 import deleteIcon from "./deleteIcon.js";
 import { readTask } from "./readTask.js";
@@ -19,10 +20,14 @@ export const addTask = (evento) => {
   input.value = "";
   calendar.value = "";
 
+  const complete = false;
+
   const taskObjt = {
     value,
     dateFormat,
-  };
+    complete,
+    id: uuid.v4()
+    };
 
   list.innerHTML = '';  
 
@@ -35,18 +40,24 @@ export const addTask = (evento) => {
 };
 
 //Arrow function o funciones anonimas
-export const createTask = ({ value, dateFormat }) => {
+export const createTask = ({ value, dateFormat,complete,id }) => {
   const task = document.createElement("li");
     task.classList.add("card");
 
   //Backticks
   const taskContent = document.createElement("div");
 
- 
+  const check = checkComplete(id);
+
+  if (complete) {
+    check.classList.toggle('fas');
+    check.classList.toggle('completeIcon');
+    check.classList.toggle('far');
+  }
   const titleTask = document.createElement("span");
    titleTask.classList.add("task");
    titleTask.innerText = value;
-   taskContent.appendChild(checkComplete());
+   taskContent.appendChild(check);
    taskContent.appendChild(titleTask);
 
   // task.innerHTML = content;
@@ -55,7 +66,7 @@ export const createTask = ({ value, dateFormat }) => {
     dateElement.innerHTML = dateFormat;
     task.appendChild(taskContent);
     task.appendChild(dateElement);
-    task.appendChild(deleteIcon());
+    task.appendChild(deleteIcon(id));
 
   return task;
 };

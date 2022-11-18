@@ -1,14 +1,20 @@
-const deleteIcon = () =>{
+import { readTask } from "./readTask.js";
+
+const deleteIcon = (id) =>{
     const i = document.createElement("i");
     i.classList.add("fas","fa-trash-alt","trashIcon","icon")
-    i.addEventListener("click",deleteTask)
+    i.addEventListener("click",() => deleteTask(id));
     return i;
 }
 
-const deleteTask =  (evento) =>{
-    console.log("Eliminar tarea")
-    const parent = evento.target.parentElement;//Apuntamos al elemento objetivo y a su padre el cual es card
-    parent.remove();
-
+const deleteTask =  (id) =>{
+    const li = document.querySelector('[data-list]');
+    const task = JSON.parse(localStorage.getItem('task'));
+    const index = task.findIndex((item) => item.id === id);
+    console.log(index)
+    const newTasks = task.splice(index,1);
+    li.innerHTML = '';
+    localStorage.setItem('task',JSON.stringify(task));
+    readTask();
 }
 export default deleteIcon;
