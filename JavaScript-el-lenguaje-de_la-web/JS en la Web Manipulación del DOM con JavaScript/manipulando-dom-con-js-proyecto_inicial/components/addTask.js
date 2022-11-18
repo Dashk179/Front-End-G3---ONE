@@ -1,5 +1,6 @@
 import checkComplete from "./checkComplete.js";
 import deleteIcon from "./deleteIcon.js";
+import { readTask } from "./readTask.js";
 
 export const addTask = (evento) => {
   evento.preventDefault();
@@ -12,6 +13,9 @@ export const addTask = (evento) => {
   const date = calendar.value;
   const dateFormat = moment(date).format("DD/MM/YYYY");
 
+  if (value === '' || date === '') {
+    return;
+  }
   input.value = "";
   calendar.value = "";
 
@@ -20,13 +24,14 @@ export const addTask = (evento) => {
     dateFormat,
   };
 
+  list.innerHTML = '';  
+
   const taskList = JSON.parse(localStorage.getItem("task")) || []; //En caso de que sea null se le da un valor por defecto
   taskList.push(taskObjt);
 
   localStorage.setItem("task", JSON.stringify(taskList));
 
-  const task = createTask(taskObjt);
-  list.appendChild(task);
+  readTask();
 };
 
 //Arrow function o funciones anonimas
